@@ -44,5 +44,5 @@ print(f'new name: {puppy.name}, new age: {puppy.age}')
 kitty = Cat('Conya', 1)
 print(f'name: {kitty.name}, age: {kitty.age}')
 kitty.age = 2
-kitty.name = 'Liliy'
+kitty.name = 'Lilly'
 print(f'new name: {kitty.name}, new age: {kitty.age}')
