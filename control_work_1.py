@@ -2,10 +2,7 @@ class Animal:
     def __init__(self, name, age):
         self.__name = name
         self.__age = age
-
-    def make_sound(self):
-        print('sound')
-
+        
     @property
     def name(self):
         return self.__name
@@ -36,6 +33,7 @@ class Dog(Animal):
     def make_sound(self):
         print('Гав-гав')
 
+
 puppy = Dog('Nike', 5)
 print(f'name: {puppy.name}, age: {puppy.age}')
 puppy.name = 'Tayson'
@@ -46,3 +44,7 @@ print(f'name: {kitty.name}, age: {kitty.age}')
 kitty.age = 2
 kitty.name = 'Lilly'
 print(f'new name: {kitty.name}, new age: {kitty.age}')
+print()
+animals = [puppy, kitty]
+for s in animals:
+    s.make_sound()
