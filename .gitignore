@@ -1,0 +1,9 @@
+lessons/
+.venv/
+venv/
+homework.__pycache__
+.env
+__pycache__/
+*.sqlite3
+*.sqlite
+*.db
