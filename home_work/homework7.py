@@ -9,10 +9,6 @@ def create_table(conn):
     number_of_copies INTEGER
     )
 # """)
-#     git add .
-# git commit -m "save local changes"
-# git pull origin master --rebase
-# git push origin master
 
 def insert_books(conn, name, author, publition_year, genre, number_of_pages, number_of_copies):
     conn.execute("""
