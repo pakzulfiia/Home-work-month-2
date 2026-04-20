@@ -8,7 +8,7 @@ def create_table(conn):
     number_of_pages INTEGER,
     number_of_copies INTEGER
     )
-# """)
+""")
 
 def insert_books(conn, name, author, publition_year, genre, number_of_pages, number_of_copies):
     conn.execute("""
