@@ -1,5 +1,5 @@
 import sqlite3
-from homework7 import (create_table, insert_books, get_all_books)
+from homework7 import (create_table, insert_books, get_all_books, get_books_by_author, delete_books_by_id)
 
 
 connection = sqlite3.connect('MyBooks.db')
@@ -15,6 +15,14 @@ insert_books(connection, "The Catcher in the Rye", "J.D. Salinger", 1951, "Ficti
 insert_books(connection, "The Hobbit", "J.R.R. Tolkien", 1937, "Fantasy", 310, 11)
 insert_books(connection, "Crime and Punishment", "Fyodor Dostoevsky", 1866, "Philosophical", 671, 4)
 insert_books(connection, "Brave New World", "Aldous Huxley", 1932, "Science Fiction", 311, 6)
+
+authors_book = get_books_by_author(connection, 'Leo Tolstoy')
+print(authors_book)
+print()
+
+del_book = delete_books_by_id(connection, 5)
+print(del_book)
+print()
 
 for b in get_all_books(connection):
     print(b)
