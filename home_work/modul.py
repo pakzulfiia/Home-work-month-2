@@ -17,11 +17,11 @@ insert_books(connection, "Crime and Punishment", "Fyodor Dostoevsky", 1866, "Phi
 insert_books(connection, "Brave New World", "Aldous Huxley", 1932, "Science Fiction", 311, 6)
 
 authors_book = get_books_by_author(connection, 'Leo Tolstoy')
-print(authors_book)
+print(get_all_books(connection))
 print()
 
 del_book = delete_books_by_id(connection, 5)
-print(del_book)
+print(get_all_books(connection))
 print()
 
 for b in get_all_books(connection):
