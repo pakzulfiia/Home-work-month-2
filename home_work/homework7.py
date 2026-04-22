@@ -1,6 +1,3 @@
-import sqlite3
-
-
 def create_table(conn):
     conn.execute("""
     CREATE TABLE IF NOT EXISTS books(
@@ -39,15 +36,3 @@ def delete_books_by_id(conn, book_id):
     DELETE FROM books WHERE id = ?
     """, (book_id,))
     conn.commit()
-
-if __name__ == "__main__":
-    connection = sqlite3.connect('MyBooks.db')
-    create_table(connection)
-    insert_books(connection, "Test", "Test", 2026, "Test", 100, 1)
-    get_all_books(connection)
-    get_books_by_author(connection, "Test")
-    delete_books_by_id(connection, 1)
-    connection.commit()
-    print(get_all_books(connection))
-
-    connection.close()
